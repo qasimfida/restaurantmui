@@ -7,7 +7,6 @@ export const Wrapper = styled(Box)`
   height: 80px;
   width: 60px;
   color: #4d4d4d;
-
   & img {
     height: 80px;
   }
@@ -20,4 +19,9 @@ export const TabsText = styled(Typography)`
   font-size: 16px;
   font-weight: bold;
   line-height: 22px;
+  & .Mui-selected {
+    color: #579b3f !important;
+  }
+}
+
 `;

@@ -39,6 +39,7 @@ export const StyledTab = styled(Tab)`
   &.Mui-selected {
     border-radius: 5px;
     font-weight: bold;
+    color: #579b3f;
   }
 `;
 export const StyledFormControl = styled(FormControl)`

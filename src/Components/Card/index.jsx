@@ -1,32 +1,23 @@
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  Typography,
-  CardActionArea,
-} from "@mui/material";
+import { CardContent, CardActionArea } from "@mui/material";
 import salad from ".././../images/salad.jpg";
 import {
   CardTitle,
   FoodMacros,
   FoodMacrosWrapper,
+  StyledCard,
   StyledMedia,
   TotalMacros,
 } from "./styles";
 const MenuCard = () => {
   return (
-    <Card>
+    <StyledCard>
       <CardActionArea>
         <StyledMedia image={salad} title="Food" />
         <CardContent>
           <CardTitle gutterBottom variant="h5" component="h2">
             Chicken Pasta
           </CardTitle>
-
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles,
-          </Typography>
           <FoodMacrosWrapper>
             <FoodMacros>
               Protein <br />
@@ -47,7 +38,7 @@ const MenuCard = () => {
           </FoodMacrosWrapper>
         </CardContent>
       </CardActionArea>
-    </Card>
+    </StyledCard>
   );
 };
 

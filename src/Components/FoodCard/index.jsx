@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import { Box, InputLabel, MenuItem, Select } from "@mui/material";
 import { TabList, TabPanel } from "@mui/lab";
 import Dates from "../Dates";
 import {
@@ -17,8 +17,8 @@ import dinner from "../../images/dinner.jpg";
 import Card from "../Card";
 
 const FoodCard = () => {
-  const [value, setValue] = React.useState("1");
-  const [state, setState] = React.useState({
+  const [value, setValue] = useState("1");
+  const [state, setState] = useState({
     age: "",
     name: "hai",
   });
@@ -27,11 +27,7 @@ const FoodCard = () => {
     setValue(newValue);
   };
   const handleDropDownChange = (event) => {
-    const name = event.target.name;
-    setState({
-      ...state,
-      [name]: event.target.value,
-    });
+    console.log("hello");
   };
 
   return (
@@ -60,10 +56,11 @@ const FoodCard = () => {
           <StyledFormControl>
             <InputLabel id="my-select-label">Package</InputLabel>
             <Select
+              style={{ height: 40 }}
               labelId="my-select-label"
               id="my-select"
               value={value}
-              onChange={handleChange}
+              onChange={handleDropDownChange}
             >
               <MenuItem value={1}>Option 1</MenuItem>
               <MenuItem value={2}>Option 2</MenuItem>

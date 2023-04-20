@@ -1,10 +1,14 @@
+import { ThemeProvider } from "@mui/material";
 import "./App.css";
 import FoodCard from "./Components/FoodCard";
+import { theme } from "./theme";
 
 function App() {
   return (
     <div className="App">
-      <FoodCard />
+      <ThemeProvider theme={theme}>
+        <FoodCard />
+      </ThemeProvider>
     </div>
   );
 }

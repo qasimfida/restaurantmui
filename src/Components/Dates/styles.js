@@ -5,14 +5,14 @@ export const Wrapper = styled(Box)`
   display: flex;
   justify-content: center;
   height: 60px;
-  width: 40px;
+  width: 50px;
   background: #579b3f;
   border: 2px solid #579b3f;
   border-radius: 10px;
   margin: 3px;
   cursor: pointer;
-  color: #333333;
-
+  color: #4d4d4d;
+  margin-bottom: 20px;
   &.active {
     background: #ffffff;
     color: #579b3f;
