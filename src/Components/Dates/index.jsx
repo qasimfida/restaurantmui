@@ -17,17 +17,15 @@ const Dates = () => {
     <DatesWrapper>
       {dates.map((item) => {
         return (
-          <>
-            <Wrapper
-              className={`${active === item.date ? "active" : "disabled"}`}
-              onClick={() => handleClick(item.date)}
-            >
-              <Day variant="h6">
-                {item.date} <Date>{item.day}</Date>
-              </Day>
-              {/* <ArrowDropUpIcon fill="primary" className="active-icon" /> */}
-            </Wrapper>
-          </>
+          <Wrapper
+            className={`${active === item.date ? "active" : "disabled"}`}
+            onClick={() => handleClick(item.date)}
+          >
+            <Day variant="h6">
+              {item.date} <Date>{item.day}</Date>
+            </Day>
+            {/* <ArrowDropUpIcon fill="primary" className="active-icon" /> */}
+          </Wrapper>
         );
       })}
     </DatesWrapper>
